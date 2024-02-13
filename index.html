@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayDough Pizza Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="hero">PlayDough Pizza Builder</h1>
+
+    <!-- Form for building custom pizza -->
+    <h2 class="hero">Build Your Pizza</h2>
+    <form id="customPizzaForm">
+        <label for="pizzaName">Pizza Name:</label>
+        <input type="text" id="pizzaName" name="pizzaName"><br><br>
+        
+        <!-- Topping selection -->
+        <div class="topping-category">
+            <h3>Cheese:</h3>
+            <div id="cheeseToppings"></div><br>
+
+            <h3>Sauce:</h3>
+            <div id="sauceToppings"></div><br>
+        </div>
+
+        <div class="topping-category">
+            <h3>Meat:</h3>
+            <div id="meatToppings"></div><br>
+
+            <h3>Vegetable:</h3>
+            <div id="vegetableToppings"></div><br>
+        </div>
+
+        <!-- Custom toppings -->
+        <div id="customToppings">
+            <h3>Custom Toppings:</h3>
+            <div>
+                <label>Add Custom Cheese:</label>
+                <input type="text" id="customCheese" placeholder="Enter custom cheese">
+                <button type="button" onclick="addCustomTopping('cheese')">Add</button>
+            </div>
+            <div>
+                <label>Add Custom Sauce:</label>
+                <input type="text" id="customSauce" placeholder="Enter custom sauce">
+                <button type="button" onclick="addCustomTopping('sauce')">Add</button>
+            </div>
+            <div>
+                <label>Add Custom Meat:</label>
+                <input type="text" id="customMeat" placeholder="Enter custom meat">
+                <button type="button" onclick="addCustomTopping('meat')">Add</button>
+            </div>
+            <div>
+                <label>Add Custom Vegetable:</label>
+                <input type="text" id="customVegetable" placeholder="Enter custom vegetable">
+                <button type="button" onclick="addCustomTopping('vegetable')">Add</button>
+            </div>
+        </div><br>
+
+        <!-- Selected toppings list -->
+        <div id="selectedToppings">
+            <h3>Selected Toppings:</h3>
+            <ul id="selectedToppingsList"></ul>
+        </div>
+
+        <input type="submit" value="Create Pizza">
+    </form>
+
+    <!-- Output section to display the custom pizza -->
+    <div id="customPizzaOutput"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
